@@ -141,6 +141,18 @@ docker-compose -f ~/XRd-Labs/clus25-devwks3337/docker-compose.yml up -d
 > [!NOTE]  
 > You can watch the XRd container logs by using `docker logs -f <XRD_CONTAINER_NAME>` (example: `docker logs -f xrd-1`)
 
+## Verification
+
+After finishing all the steps above, you should have a working XRd topology. To verify:
+
+1. On 198.18.134.28, check that all containers are running:
+
+   ```bash
+   docker ps
+   ```
+
+2. You should see 10 containers (xrd-1 through xrd-10) in "Up" state.
+
 ### Configure gNMI on XRd Instances - 198.18.134.29
 
 On our VM used as working directory (198.18.134.29), configure gNMI on the XRd devices using ansible:
@@ -152,16 +164,6 @@ cd ~/DEVWKS-3337/ansible/ && ansible-playbook xrd_apply_config.yaml && cd -
 > [!TIP]
 > This playbook enables gNMI on all XRd devices so they can communicate with our agents.
 
-## Verification and Next Steps
-
-After finishing all the steps above, you should have a working XRd topology. To verify:
-
-1. On 198.18.134.28, check that all containers are running:
-
-   ```bash
-   docker ps
-   ```
-
-2. You should see 10 containers (xrd-1 through xrd-10) in "Up" state.
+## Next Steps
 
 Continue now to [Setup Langgraph](SETUP_LANGGRAPH.md) to configure the AI agents that will interact with your network.
