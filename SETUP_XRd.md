@@ -115,27 +115,27 @@ On the XRd host (198.18.134.28) convert the xr-compose file into a docker compos
 
 ```bash
 xr-compose \
-  --input-file ~/DEVWKS-3337/xrd/docker-compose.xr.yml \
-  --output-file ~/DEVWKS-3337/xrd/docker-compose.yml \
+  --input-file ~/XRd-Labs/clus25-devwks3337/docker-compose.xr.yml \
+  --output-file ~/XRd-Labs/clus25-devwks3337/docker-compose.yml \
   --image ios-xr/xrd-control-plane:24.2.1
 ```
 
 Since we are using macvlan mode on docker, we need to tell the XRd containers which container interface will be map to the XRd management interface.
 
 ```bash
-sed -i 's/XR_MGMT_INTERFACES: linux:xr-[0-9]\+/XR_MGMT_INTERFACES: linux:eth0/g' ~/DEVWKS-3337/xrd/docker-compose.yml
+sed -i 's/XR_MGMT_INTERFACES: linux:xr-[0-9]\+/XR_MGMT_INTERFACES: linux:eth0/g' ~/XRd-Labs/clus25-devwks3337/docker-compose.yml
 ```
 
 We also need to update the network interface to point to macvlan.
 
 ```bash
-sed -i 's/xrd-[0-9]\+-mg0: null/macvlan0: null/g' ~/DEVWKS-3337/xrd/docker-compose.yml
+sed -i 's/xrd-[0-9]\+-mg0: null/macvlan0: null/g' ~/XRd-Labs/clus25-devwks3337/docker-compose.yml
 ```
 
 ### Start XRd Instances - 198.18.134.28
 
 ```bash
-docker-compose -f ~/DEVWKS-3337/xrd/docker-compose.yml up -d
+docker-compose -f ~/XRd-Labs/clus25-devwks3337/docker-compose.yml up -d
 ```
 
 > [!NOTE]  
