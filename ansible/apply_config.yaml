@@ -1,0 +1,10 @@
+---
+- name: Apply this  initial config to XRD , else I was not able to to go config mode.
+  hosts: xr
+  gather_facts: false
+
+  tasks:
+   - name: enable xrd devices to accept config changes
+     cisco.iosxr.iosxr_command:
+      commands:
+      - clear configuration inconsistency

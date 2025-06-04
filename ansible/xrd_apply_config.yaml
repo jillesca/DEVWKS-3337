@@ -1,0 +1,17 @@
+---
+- name: Apply this  grpc configs.
+  hosts: xr
+  gather_facts: false
+
+  tasks:
+   - name: enable grpc
+     cisco.iosxr.iosxr_config:
+      lines:
+        - grpc
+   - name: configure grpc parameters
+     cisco.iosxr.iosxr_config:
+      lines:
+        - vrf Mgmt
+        -  port 57777
+        - no-tls
+      parents: grpc

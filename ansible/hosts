@@ -1,0 +1,17 @@
+[xr]
+xrd-1	ansible_host=198.18.158.16
+xrd-2	ansible_host=198.18.158.17
+xrd-3	ansible_host=198.18.158.18
+xrd-4	ansible_host=198.18.158.19
+xrd-5	ansible_host=198.18.158.20
+xrd-6	ansible_host=198.18.158.21
+xrd-7	ansible_host=198.18.158.22
+xrd-8	ansible_host=198.18.158.23
+xrd-9	ansible_host=198.18.158.24
+xrd-10	ansible_host=198.18.158.25
+
+[xr:vars]
+ansible_user=admin
+ansible_password=C1sco123
+ansible_network_os=cisco.iosxr.iosxr
+ansible_connection=network_cli
