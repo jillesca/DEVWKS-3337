@@ -32,15 +32,15 @@ You can use vscode (recommended) or the terminal client:
 On `198.18.134.28`, log in and run:
 
 ```bash
-cd ~
-git clone https://github.com/jillesca/xrd-lab
+cd /root
+git clone https://github.com/jillesca/XRd-Labs
 ```
 
 On `198.18.134.29`, log in and run:
 
 ```bash
-cd ~
-git clone https://github.com/jillesca/gnmi-buddy
+cd /root
+git clone https://github.com/jillesca/gNMIBuddy
 git clone https://github.com/jillesca/sp_oncall
 git clone https://github.com/jillesca/DEVWKS-3337
 ```

@@ -33,9 +33,9 @@ flowchart TD
 
 ### Repositories used
 
-- **[xrd-lab](https://github.com/jillesca/xrd-lab)** Contains all files to deploy Cisco XRd containers (docker-compose files, configs).
+- **[xrd-lab](https://github.com/jillesca/XRd-Labs)** Contains all files to deploy Cisco XRd containers (docker-compose files, configs).
 
-- **[gnmi-buddy](https://github.com/jillesca/gnmi-buddy)** gNMI Tool used by the Langgraph agents to connect to the network devices.
+- **[gnmi-buddy](https://github.com/jillesca/gNMIBuddy)** gNMI Tool used by the Langgraph agents to connect to the network devices.
 
 - **[sp_oncall](https://github.com/jillesca/sp_oncall)** The Graph of agents.
 
@@ -106,3 +106,10 @@ xrd-9 --- xrd-1  |        |  xrd-2 --- xrd-10
 👉 **[Click here to start the workshop setup](SETUP.md)** 👈
 
 Follow the step-by-step instructions in the setup guide to configure your environment and get hands-on with AI-powered network operations!
+
+```bash
+git clone --branch release git@github.com:jillesca/sp_oncall.git
+git clone --branch release git@github.com:jillesca/gNMIBuddy.git
+git clone --branch release git@github.com:jillesca/XRd-Labs.git
+git clone --branch release git@github.com:jillesca/DEVWKS-3337.git
+```
