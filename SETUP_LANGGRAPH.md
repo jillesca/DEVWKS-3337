@@ -2,7 +2,7 @@
 
 ## Set environment variables
 
-Create a `.env` file in the root directory of the `sp_oncall` project (`~/sp_oncall/.env`) with the following environment variables:
+Create a `.env` file in the root directory of the `sp_oncall` project (`/home/devnet/DEVWKS-3337/sp_oncall/.env`) with the following environment variables:
 
 ```bash
 LANGSMITH_TRACING=true
@@ -26,7 +26,7 @@ Make sure to switch to the `DEVWKS-3337` organization used by the workshop.
 Start the langgraph server using the prepared Makefile command. This will initialize the agents that will interact with your network.
 
 ```bash
-cd ~/sp_oncall && make run
+cd /home/devnet/DEVWKS-3337/sp_oncall && make run
 ```
 
 ### Verifying Langgraph Setup
