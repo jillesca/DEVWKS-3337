@@ -34,18 +34,32 @@ cd /home/devnet/DEVWKS-3337/sp_oncall && make run
 
 After the server starts, langgraph redirects to a web app where we can interact with the graph we just started. You'll see the Langgraph UI where you can interact with the network agents.
 
-Add MCP configuration
+Start with a simple query to verify everything is working correctly. For example, "how is xrd-8 configured?".
+
+How the results were?
+
+## Add MCP Support
+
+We need to add tools to the Langgraph agents to interact with the network. We will use MCP to connect the agent with gNMIBuddy.
+
+### Test tools on the workshop laptop
+
+To test the tools on the workshop laptop, we will use the [MCP Inspector tool](https://modelcontextprotocol.io/docs/tools/inspector). This tool allows us to inspect and run MCP tools locally.
 
 ```bash
 npx @modelcontextprotocol/inspector \
 uv run --with "mcp[cli],pygnmi,networkx" \
-mcp run /Users/jillesca/DevNet/cisco_live/25clus/gNMIBuddy/mcp_server.py
+mcp run /home/devnet/DEVWKS-3337/gNMIBuddy/mcp_server.py
 ```
 
-```bash
-      NETWORK_INVENTORY: /home/devnet/DEVWKS-3337/xrd_inventory.json
-      /home/devnet/DEVWKS-3337/gNMIBuddy/mcp_server.py
-```
+> [!NOTE]  
+> On the MCP inspector set the environment variable `NETWORK_INVENTORY` to `/home/devnet/DEVWKS-3337/xrd_inventory.json`.
+
+### Add MCP configuration
+
+On Langgraph, we need to add the MCP configuration to the `sp_oncall` project. This will allow the agents to use the gNMIBuddy tool.
+
+On the _Manage Assistants_ setting, add the following configuration to the `Mcp Client Config` field:
 
 ```json
 {
@@ -66,3 +80,5 @@ mcp run /Users/jillesca/DevNet/cisco_live/25clus/gNMIBuddy/mcp_server.py
   }
 }
 ```
+
+Close the settings and test your query again. This time the agent should be able to use the gNMIBuddy tool to answer your question.
