@@ -176,8 +176,7 @@ git clone https://github.com/jillesca/DEVWKS-3337
 
 ```bash
 cd /root/DEVWKS-3337/ansible/ \
-&& ansible-playbook xrd_apply_config.yaml \
-&& cd -
+&& ansible-playbook xrd_apply_config.yaml
 ```
 
 > [!TIP]
