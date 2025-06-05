@@ -24,7 +24,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph Workshop Laptop /home/devnet/DEVWKS-3337
+    subgraph Workshop Laptop
         C[instructions & Ansible Playbooks]
         D[gnmi-buddy repo]
         E[sp_oncall repo]
@@ -57,7 +57,7 @@ flowchart TD
         A[XRd Containers]
     end
 
-    subgraph Workshop Laptop /home/devnet/DEVWKS-3337
+    subgraph Workshop Laptop
         D[sp_oncall]
         E[gnmi-buddy]
         D --> E
