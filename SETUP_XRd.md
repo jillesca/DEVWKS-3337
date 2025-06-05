@@ -153,12 +153,19 @@ After finishing all the steps above, you should have a working XRd topology. To 
 
 2. You should see 10 containers (xrd-1 through xrd-10) in "Up" state.
 
-### Configure gNMI on XRd Instances - Workshop Laptop
+**Review how XRd is booting up.**
 
-On our workshop laptop configure gNMI on the XRd devices using ansible:
+### Configure gNMI on XRd Instances - 192.18.134.29
+
+On the `192.18.134.29` VM configure gNMI on the XRd devices using ansible:
 
 ```bash
-cd /home/devnet/DEVWKS-3337/DEVWKS-3337/ansible/ \
+cd /root
+git clone https://github.com/jillesca/DEVWKS-3337
+```
+
+```bash
+cd /root/DEVWKS-3337/ansible/ \
 && ansible-playbook xrd_apply_config.yaml \
 && cd -
 ```

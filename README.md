@@ -11,6 +11,8 @@ The workshop uses two virtual machines with the following roles:
 
 - `198.18.134.28`
   - Host for XRd containers
+- `198.18.134.29`
+  - To execute Ansible playbooks
 - Workshop Laptop
   - Host for agents and tooling.
 
@@ -24,8 +26,15 @@ flowchart TD
 
 ```mermaid
 flowchart TD
+    subgraph VM - 198.18.134.29
+        F[Ansible Playbooks]
+    end
+```
+
+```mermaid
+flowchart TD
     subgraph Workshop Laptop
-        C[instructions & Ansible Playbooks]
+        C[instructions]
         D[gnmi-buddy repo]
         E[sp_oncall repo]
     end
@@ -57,20 +66,25 @@ flowchart TD
         A[XRd Containers]
     end
 
+    subgraph VM - 198.18.134.29
+        F[Ansible Playbooks]
+    end
+
     subgraph Workshop Laptop
         D[sp_oncall]
         E[gnmi-buddy]
         D --> E
         E --> A
+        F --> A
     end
 ```
 
 ## Credentials
 
-| **System**           | **Username** | **Password** |
-| -------------------- | ------------ | ------------ |
-| **VM** 198.18.134.28 | `root`       | `C1sco12345` |
-| **XRd devices**      | `admin`      | `C1sco123`   |
+| **System**              | **Username** | **Password** |
+| ----------------------- | ------------ | ------------ |
+| **VM** 198.18.134.2[89] | `root`       | `C1sco12345` |
+| **XRd devices**         | `admin`      | `C1sco123`   |
 
 ## Devices
 
