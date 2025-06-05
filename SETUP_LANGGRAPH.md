@@ -5,6 +5,7 @@
 Create a `.env` file in the root directory of the `sp_oncall` project (`/home/devnet/DEVWKS-3337/sp_oncall/.env`) with the following environment variables:
 
 ```bash
+# .env file
 LANGSMITH_TRACING=true
 LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
 OPENAI_API_KEY=<OPEN_API_KEY>
