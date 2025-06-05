@@ -158,7 +158,9 @@ After finishing all the steps above, you should have a working XRd topology. To 
 On our workshop laptop configure gNMI on the XRd devices using ansible:
 
 ```bash
-cd /home/devnet/DEVWKS-3337/DEVWKS-3337/ansible/ && ansible-playbook xrd_apply_config.yaml && cd -
+cd /home/devnet/DEVWKS-3337/DEVWKS-3337/ansible/ \
+&& ansible-playbook xrd_apply_config.yaml \
+&& cd -
 ```
 
 > [!TIP]
