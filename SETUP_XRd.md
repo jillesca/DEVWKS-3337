@@ -182,9 +182,19 @@ cd /root/DEVWKS-3337/ansible/ \
 > [!TIP]
 > This playbook enables gNMI on all XRd devices so they can communicate with our agents.
 
+### Test gNMI configuration - Workshop Laptop
+
+On the workshop laptop, verify the gNMI configuration is working on the XRd containers.
+
+```bash
+cd /home/devnet/DEVWKS-3337/gNMIBuddy/ \
+&& uv run cli_app.py --inventory xrd_inventory.json  --device xrd-1 mpls --detail \
+cd -
+```
+
 ## Next Steps
 
-Continue now to [Test XRd connection](TEST_XRd.md) to configure the AI agents that will interact with your network.
+Continue now to [Setup Langgraph](SETUP_LANGGRAPH.md) to configure the AI agents that will interact with your network.
 
 TODO:
 

@@ -36,6 +36,17 @@ After the server starts, langgraph redirects to a web app where we can interact 
 
 Add MCP configuration
 
+```bash
+npx @modelcontextprotocol/inspector \
+uv run --with "mcp[cli],pygnmi,networkx" \
+mcp run /Users/jillesca/DevNet/cisco_live/25clus/gNMIBuddy/mcp_server.py
+```
+
+```bash
+      NETWORK_INVENTORY: /home/devnet/DEVWKS-3337/xrd_inventory.json
+      /home/devnet/DEVWKS-3337/gNMIBuddy/mcp_server.py
+```
+
 ```json
 {
   "gNMIBuddy": {
