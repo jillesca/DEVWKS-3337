@@ -33,3 +33,25 @@ cd /home/devnet/DEVWKS-3337/sp_oncall && make run
 ### Verifying Langgraph Setup
 
 After the server starts, langgraph redirects to a web app where we can interact with the graph we just started. You'll see the Langgraph UI where you can interact with the network agents.
+
+Add MCP configuration
+
+```json
+{
+  "gNMIBuddy": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--with",
+      "mcp[cli],pygnmi,networkx",
+      "mcp",
+      "run",
+      "/home/devnet/DEVWKS-3337/gNMIBuddy/mcp_server.py"
+    ],
+    "transport": "stdio",
+    "env": {
+      "NETWORK_INVENTORY": "/home/devnet/DEVWKS-3337/xrd_inventory.json"
+    }
+  }
+}
+```

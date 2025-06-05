@@ -184,7 +184,7 @@ cd /root/DEVWKS-3337/ansible/ \
 
 ## Next Steps
 
-Continue now to [Setup Langgraph](SETUP_LANGGRAPH.md) to configure the AI agents that will interact with your network.
+Continue now to [Test XRd connection](TEST_XRd.md) to configure the AI agents that will interact with your network.
 
 TODO:
 
