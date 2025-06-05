@@ -1,4 +1,4 @@
-# Setup Langgraph - 198.18.134.29
+# Setup Langgraph - Workshop Laptop
 
 ## Set environment variables
 
