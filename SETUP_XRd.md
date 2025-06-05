@@ -144,11 +144,11 @@ sed -i 's/xrd-[0-9]\+-mg0: null/macvlan0: null/g' ~/XRd-Labs/clus25-devwks3337/d
 docker-compose -f ~/XRd-Labs/clus25-devwks3337/docker-compose.yml up -d
 ```
 
-## Verification
+### Verification - 198.18.134.28
 
 After finishing all the steps above, you should have a working XRd topology. To verify:
 
-1. On 198.18.134.28, check that all containers are running:
+1. On `198.18.134.28`, check that all containers are running:
 
 ```bash
 docker ps
@@ -165,7 +165,7 @@ Once you ISIS come up, XRd should be ready to take SSH connections.
 > [!NOTE]  
 > You can watch all XRd logs at once by using `docker compose logs -f` make sure you are on the directory that has the compose file.
 
-### Configure gNMI on XRd Instances - 192.18.134.29
+## Configure gNMI on XRd Instances - 192.18.134.29
 
 On the `192.18.134.29` VM configure gNMI on the XRd devices using ansible:
 
