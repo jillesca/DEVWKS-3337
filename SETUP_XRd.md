@@ -185,3 +185,8 @@ cd /root/DEVWKS-3337/ansible/ \
 ## Next Steps
 
 Continue now to [Setup Langgraph](SETUP_LANGGRAPH.md) to configure the AI agents that will interact with your network.
+
+TODO:
+
+- Add how to enter the XRd cli from the container itself.
+  - Using bash and docker attatch
