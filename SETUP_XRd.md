@@ -109,6 +109,12 @@ Verify the XRd image is present on the VM.
 docker image ls
 ```
 
+Review the existing containers.
+
+```bash
+docker ps -a
+```
+
 ### Prepare XRd Instances - 198.18.134.28
 
 On the XRd host (198.18.134.28) convert the xr-compose file into a docker compose file.
@@ -138,22 +144,26 @@ sed -i 's/xrd-[0-9]\+-mg0: null/macvlan0: null/g' ~/XRd-Labs/clus25-devwks3337/d
 docker-compose -f ~/XRd-Labs/clus25-devwks3337/docker-compose.yml up -d
 ```
 
-> [!NOTE]  
-> You can watch the XRd container logs by using `docker logs -f <XRD_CONTAINER_NAME>` (example: `docker logs -f xrd-1`)
-
 ## Verification
 
 After finishing all the steps above, you should have a working XRd topology. To verify:
 
 1. On 198.18.134.28, check that all containers are running:
 
-   ```bash
-   docker ps
-   ```
+```bash
+docker ps
+```
 
-2. You should see 10 containers (xrd-1 through xrd-10) in "Up" state.
+2. Review how XRd is booting up.
 
-**Review how XRd is booting up.**
+```bash
+docker logs -f xrd-1
+```
+
+Once you ISIS come up, XRd should be ready to take SSH connections.
+
+> [!NOTE]  
+> You can watch all XRd logs at once by using `docker compose logs -f` make sure you are on the directory that has the compose file.
 
 ### Configure gNMI on XRd Instances - 192.18.134.29
 
