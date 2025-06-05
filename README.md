@@ -1,4 +1,4 @@
-# DEVWKS-3337 - Building AI Agents for Network Operations with LangGraph
+# DEVWKS-3337 - DYI your AI agents for Service Providers
 
 ## Lab Overview
 
