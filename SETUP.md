@@ -2,7 +2,7 @@
 
 This guide walks you through setting up your workshop environment, including SSH configuration and cloning the necessary repositories to both VMs.
 
-## SSH Agent Prerequisites
+## SSH Agent Prerequisites - Workshop Laptop
 
 On the laptop provided, start the ssh agent and add the ssh keys.
 
@@ -29,6 +29,8 @@ You can use vscode (recommended) or the terminal client:
 > [!TIP]  
 > vscode is recommended option for this workshop. It's already configured with access to both VMs.
 
+### XRd VM - 198.18.134.28
+
 On `198.18.134.28`, log in and run:
 
 ```bash
@@ -36,9 +38,12 @@ cd /root
 git clone https://github.com/jillesca/XRd-Labs
 ```
 
+### Workshop Laptop
+
 On the workshop laptop run:
 
 ```bash
+mkdir -p /home/devnet/DEVWKS-3337
 cd /home/devnet/DEVWKS-3337
 ```
 
