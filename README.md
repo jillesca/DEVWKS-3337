@@ -81,10 +81,10 @@ flowchart TD
 
 ## Credentials
 
-| **System**              | **Username** | **Password** |
-| ----------------------- | ------------ | ------------ |
-| **VM** 198.18.134.2[89] | `root`       | `C1sco12345` |
-| **XRd devices**         | `admin`      | `C1sco123`   |
+| **System**                | **Username** | **Password** |
+| ------------------------- | ------------ | ------------ |
+| **VM** `198.18.134.2[89]` | `root`       | `C1sco12345` |
+| **XRd devices**           | `admin`      | `C1sco123`   |
 
 ## Devices
 
