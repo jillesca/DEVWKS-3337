@@ -23,8 +23,8 @@ Credentials:
 
 You can use vscode (recommended) or the terminal client:
 
-- `ssh root@198.18.134.28` for the XRd host VM
-- `ssh root@198.18.134.29` for the agent/tooling VM
+- `ssh root@198.18.134.28` - XRd host VM
+- Workshop laptop - for the agent/tooling VM
 
 > [!TIP]  
 > vscode is recommended option for this workshop. It's already configured with access to both VMs.
@@ -36,12 +36,21 @@ cd /root
 git clone https://github.com/jillesca/XRd-Labs
 ```
 
-On `198.18.134.29`, log in and run:
+On the workshop laptop, log in and run:
 
 ```bash
-cd /root
+cd /home/devnet/DEVWKS-3337
+```
+
+```bash
 git clone https://github.com/jillesca/gNMIBuddy
+```
+
+```bash
 git clone https://github.com/jillesca/sp_oncall
+```
+
+```bash
 git clone https://github.com/jillesca/DEVWKS-3337
 ```
 
