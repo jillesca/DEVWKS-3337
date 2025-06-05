@@ -180,7 +180,7 @@ cd /root/DEVWKS-3337/ansible/ \
 ```
 
 > [!TIP]
-> This playbook enables gNMI on all XRd devices so they can communicate with our agents.
+> This playbook enables gNMI on all XRd devices.
 
 ### Test gNMI configuration - Workshop Laptop
 
