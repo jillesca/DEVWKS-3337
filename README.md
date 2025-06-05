@@ -40,14 +40,6 @@ flowchart TD
     end
 ```
 
-Working directory:
-
-```bash
-/home/devnet/DEVWKS-3337
-~/DEVWKS-3337
-/home/devnet/DEVWKS-3337/gNMIBuddy
-```
-
 ### Repositories used
 
 - **[xrd-lab](https://github.com/jillesca/XRd-Labs)** Contains all files to deploy Cisco XRd containers (docker-compose files, configs).
@@ -124,12 +116,3 @@ xrd-9 --- xrd-1  |        |  xrd-2 --- xrd-10
 👉 **[Click here to start the workshop setup](SETUP.md)** 👈
 
 Follow the step-by-step instructions in the setup guide to configure your environment and get hands-on with AI-powered network operations!
-
-```bash
-git clone --branch release git@github.com:jillesca/sp_oncall.git
-git clone --branch release https://github.com/jillesca/sp_oncall.git
-git clone --branch release git@github.com:jillesca/gNMIBuddy.git
-git clone --branch release https://github.com/jillesca/gNMIBuddy.git
-git clone --branch release git@github.com:jillesca/XRd-Labs.git
-git clone --branch release git@github.com:jillesca/DEVWKS-3337.git
-```

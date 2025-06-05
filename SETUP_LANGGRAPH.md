@@ -34,11 +34,13 @@ cd /home/devnet/DEVWKS-3337/sp_oncall && make run
 
 After the server starts, langgraph redirects to a web app where we can interact with the graph we just started. You'll see the Langgraph UI where you can interact with the network agents.
 
-Start with a simple query to verify everything is working correctly. For example, "how is xrd-8 configured?".
+Start with a simple query to verify everything is working correctly. For example, _"how is xrd-8 configured?"_.
 
 How the results were?
 
 ## Add MCP Support
+
+Model Context Protocol is an open protocol that standardizes how applications provide context to LLMs.
 
 We need to add tools to the Langgraph agents to interact with the network. We will use MCP to connect the agent with gNMIBuddy.
 
