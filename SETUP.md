@@ -16,14 +16,10 @@ ssh-add ~/.ssh/clus25_workshop_key
 
 ## Clone the repos
 
-Credentials:
-
-- **Username**: `root`
-- **Password**: `C1sco12345`
-
 You can use vscode (recommended) or the terminal client:
 
 - `ssh root@198.18.134.28` - XRd host VM
+  - Credentials `root` \ `C1sco12345`
 - Workshop laptop - for the agent/tooling VM
 
 > [!TIP]  
