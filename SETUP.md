@@ -36,7 +36,7 @@ cd /root
 git clone https://github.com/jillesca/XRd-Labs
 ```
 
-On the workshop laptop, log in and run:
+On the workshop laptop run:
 
 ```bash
 cd /home/devnet/DEVWKS-3337
