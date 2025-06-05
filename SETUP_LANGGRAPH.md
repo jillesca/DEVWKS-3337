@@ -16,6 +16,8 @@ Use the `OPENAI_API_KEY` provided at the workshop, or use your own.
 
 For `LANGSMITH_API_KEY` login to <https://smith.langchain.com/> and create you own key (credentials provided at the workshop too).
 
+Make sure to switch to the `DEVWKS-3337` organization used by the workshop.
+
 > [!IMPORTANT]  
 > All environment variables are required, otherwise the Langgraph will fail.
 

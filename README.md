@@ -11,7 +11,7 @@ The workshop uses two virtual machines with the following roles:
 
 - `198.18.134.28`
   - Host for XRd containers
-- `198.18.134.29`
+- Workshop Laptop
   - Host for agents and tooling.
 
 ```mermaid
@@ -24,11 +24,19 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph VM - 198.18.134.29
+    subgraph Workshop Laptop ~/DEVWKS-3337
         C[instructions & Ansible Playbooks]
         D[gnmi-buddy repo]
         E[sp_oncall repo]
     end
+```
+
+Working directory:
+
+```bash
+/home/devnet/DEVWKS-3337
+~/DEVWKS-3337
+/home/devnet/DEVWKS-3337/gNMIBuddy
 ```
 
 ### Repositories used
@@ -49,7 +57,7 @@ flowchart TD
         A[XRd Containers]
     end
 
-    subgraph VM - 198.18.134.29
+    subgraph Workshop Laptop ~/DEVWKS-3337
         D[sp_oncall]
         E[gnmi-buddy]
         D --> E
@@ -57,16 +65,12 @@ flowchart TD
     end
 ```
 
-```bash
-/home/devnet/DEVWKS-3337
-```
-
 ## Credentials
 
-| **System**                             | **Username** | **Password** |
-| -------------------------------------- | ------------ | ------------ |
-| **VMs** (198.18.134.28, 198.18.134.29) | `root`       | `C1sco12345` |
-| **XRd devices**                        | `admin`      | `C1sco123`   |
+| **System**           | **Username** | **Password** |
+| -------------------- | ------------ | ------------ |
+| **VM** 198.18.134.28 | `root`       | `C1sco12345` |
+| **XRd devices**      | `admin`      | `C1sco123`   |
 
 ## Devices
 
@@ -109,7 +113,9 @@ Follow the step-by-step instructions in the setup guide to configure your enviro
 
 ```bash
 git clone --branch release git@github.com:jillesca/sp_oncall.git
+git clone --branch release https://github.com/jillesca/sp_oncall.git
 git clone --branch release git@github.com:jillesca/gNMIBuddy.git
+git clone --branch release https://github.com/jillesca/gNMIBuddy.git
 git clone --branch release git@github.com:jillesca/XRd-Labs.git
 git clone --branch release git@github.com:jillesca/DEVWKS-3337.git
 ```
