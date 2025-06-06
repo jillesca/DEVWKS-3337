@@ -128,6 +128,9 @@ xr-compose \
 
 Since we are using macvlan mode on docker, we need to tell the XRd containers which container interface will be map to the XRd management interface.
 
+> [!NOTE]  
+> macvlan mode is a docker networking mode that allows the containers to have their own IP address on the same network as the host.
+
 ```bash
 sed -i 's/XR_MGMT_INTERFACES: linux:xr-[0-9]\+/XR_MGMT_INTERFACES: linux:eth0/g' ~/XRd-Labs/clus25-devwks3337/docker-compose.yml
 ```
