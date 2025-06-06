@@ -35,7 +35,7 @@ flowchart TD
 flowchart TD
     subgraph Workshop Laptop
         C[instructions]
-        D[gnmi-buddy repo]
+        D[gNMIBuddy repo]
         E[sp_oncall repo]
     end
 ```
