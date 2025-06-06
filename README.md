@@ -64,7 +64,7 @@ flowchart TD
 
     subgraph Workshop Laptop
         D[sp_oncall]
-        E[gnmi-buddy]
+        E[gNMIBuddy]
         D --> E
         E --> A
         F --> A
