@@ -1,5 +1,7 @@
 # Setup Langgraph - Workshop Laptop
 
+TODO: Add a step for attendees to open the sp_oncal project in VSCode.
+
 ## Set environment variables
 
 Create a `.env` file in the root directory of the `sp_oncall` project (`/home/devnet/DEVWKS-3337/sp_oncall/.env`) with the following environment variables:
@@ -54,8 +56,19 @@ uv run --with "mcp[cli],pygnmi,networkx" \
 mcp run /home/devnet/DEVWKS-3337/gNMIBuddy/mcp_server.py
 ```
 
-> [!NOTE]  
-> On the MCP inspector set the environment variable `NETWORK_INVENTORY` to `/home/devnet/DEVWKS-3337/xrd_inventory.json`.
+On the MCP inspector set:
+
+The environment variable:
+
+```bash
+NETWORK_INVENTORY
+```
+
+to:
+
+```bash
+/home/devnet/DEVWKS-3337/DEVWKS-3337/xrd_inventory.json
+```
 
 ### Add MCP configuration
 
@@ -77,7 +90,7 @@ On the _Manage Assistants_ setting, add the following configuration to the `Mcp 
     ],
     "transport": "stdio",
     "env": {
-      "NETWORK_INVENTORY": "/home/devnet/DEVWKS-3337/xrd_inventory.json"
+      "NETWORK_INVENTORY": "/home/devnet/DEVWKS-3337/DEVWKS-3337/xrd_inventory.json"
     }
   }
 }
