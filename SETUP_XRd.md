@@ -168,9 +168,11 @@ Once you ISIS come up, XRd should be ready to take SSH connections.
 > [!NOTE]  
 > You can watch all XRd logs at once by using `docker compose logs -f` make sure you are on the directory that has the compose file.
 
-## Configure gNMI on XRd Instances - 192.18.134.29
+To exit an attached container use ctrl-p, ctrl+q to escape the session.
 
-On the `192.18.134.29` VM configure gNMI on the XRd devices using ansible:
+## Configure gNMI on XRd Instances - 198.18.134.29
+
+On the `198.18.134.29` VM configure gNMI on the XRd devices using ansible:
 
 ```bash
 cd /root
@@ -202,7 +204,8 @@ uv run --with "mcp[cli],pygnmi,networkx" \
 
 Continue now to [Setup Langgraph](SETUP_LANGGRAPH.md) to configure the AI agents that will interact with your network.
 
-TODO:
+## Note. Accessing XRd Containers
 
-- Add how to enter the XRd cli from the container itself.
-  - Using bash and docker attatch
+If you use `docker attach <container>`, make sure to do it from a regular terminal (not VS Code’s integrated terminal), since VS Code does not support sending `Ctrl-p` and `Ctrl-q` to detach from the container. Use SSH if available.
+
+If you enter the container with `docker exec -it <container> bash`, you can access the XR CLI by running `/pkg/bin/xr_cli.sh` from the bash prompt.
