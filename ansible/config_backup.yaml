@@ -1,0 +1,14 @@
+---
+- name: Copy the configs to folder
+  hosts: xr
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+  - name: Backuping up current XR router config (XR)
+      # Using iosxr_config Module & backup parameter
+    cisco.iosxr.iosxr_config:
+        backup: yes
+        backup_options:
+          filename: "{{ inventory_hostname}}-startup.cfg" 
+          dir_path: "../config_backups/"
