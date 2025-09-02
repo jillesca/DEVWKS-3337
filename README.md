@@ -1,5 +1,8 @@
 # DEVWKS-3337 - DYI your AI agents for Service Providers
 
+> [!IMPORTANT]
+> This repository is no longer maintained. Please use <https://github.com/jillesca/sp_oncall>, which works seamlessly with the Cisco DevNet Sandbox and gNMIBuddy.
+
 ## Lab Overview
 
 This repository contains resources and configurations for the Cisco Live workshop `DEVWKS-3337`.
